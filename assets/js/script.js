@@ -1,6 +1,3 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-
 document.addEventListener("DOMContentLoaded", function() {
     let img1 = document.getElementById("card1");
     let img2 = document.getElementById("card2");
@@ -55,6 +52,9 @@ let cardArray = [0, 0, 0];
 //Event cock global val
 let eventLock = 0;
 
+/**
+ * This function runs the game, hides all the card faces and puts a random card to a joker value
+ */
 function runGame() {
     cardArray = [0, 0, 0];
     document.getElementById("card1").src = "assets/images/card_back_blue.png";
@@ -66,6 +66,12 @@ function runGame() {
     cardArray[randomJokerLocation] = 1;
 }
 
+/**
+ * this function gets user input and compares it to the random card selection
+ * If the guess is correct, adds one to right answers and if wrong adds one to 
+ * wronf answers
+ * @param {selected card} card 
+ */
 function flipCard(card) {
     let img1 = document.getElementById("card1");
     let img2 = document.getElementById("card2");
@@ -108,7 +114,7 @@ function flipCard(card) {
             }
         }
     }
-    if (answer[0] === cardArray[0] & answer[1] === cardArray[1] & answer[2] === cardArray[2]) {
+    if (checkAnswer(card)) {
         right.innerText++;
     }
     else {
@@ -118,11 +124,21 @@ function flipCard(card) {
 
 }
 
+/**
+ * Get a random number from 0 to 2 for joker location
+ * @returns an array index for the joker position
+ */
 function getRandomLocation() {
     let num = Math.floor(Math.random() * 3);
     return num;
 }
 
+
+/**
+ * This function takes in player card selection and returnd the result od the choice
+ * @param {player selection} playerGuess 
+ * @returns pass or fail for the guess
+ */
 function checkAnswer(playerGuess) {
     if (playerGuess === "card1") {
         if (cardArray[0] === 1) {
