@@ -14,26 +14,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     img1.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
+        if (eventLock == 0) {
             flipCard("card1")
+            eventLock = 1;
         }
 
     }); 
 
     img2.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
+        if (eventLock == 0) {
             flipCard("card2")
+            eventLock = 1;
         }
     });
 
     img3.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
+        if (eventLock == 0) {
             flipCard("card3")
+            eventLock = 1;
         }
     });
 
     button.addEventListener("click", function() {
         runGame();
+        eventLock = 0;
     }); 
 
     button2.addEventListener("click", function() {
@@ -45,7 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+//Answer global array
 let cardArray = [0, 0, 0];
+
+//Event cock global val
+let eventLock = 0;
 
 function runGame() {
     cardArray = [0, 0, 0];
