@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let img2 = document.getElementById("card2");
     let img3 = document.getElementById("card3");
     let button = document.getElementById("start");
+    let button2 = document.getElementById("resetScore");
 
     document.getElementById("right").innerText = 0;
     document.getElementById("wrong").innerText = 0;
@@ -33,6 +34,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     button.addEventListener("click", function() {
         runGame();
+    }); 
+
+    button2.addEventListener("click", function() {
+        document.getElementById("right").innerText = 0;
+        document.getElementById("wrong").innerText = 0;
     }); 
 
  
