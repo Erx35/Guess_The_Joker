@@ -14,20 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     img1.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://8000-erx35-guessthejoker-t3obbh7w3zt.ws-eu111.gitpod.io/assets/images/card_back_blue.png") {
+        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
             flipCard("card1")
         }
 
     }); 
 
     img2.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://8000-erx35-guessthejoker-t3obbh7w3zt.ws-eu111.gitpod.io/assets/images/card_back_blue.png") {
+        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
             flipCard("card2")
         }
     });
 
     img3.addEventListener("click", function() {
-        if (document.getElementById("card1").src == "https://8000-erx35-guessthejoker-t3obbh7w3zt.ws-eu111.gitpod.io/assets/images/card_back_blue.png") {
+        if (document.getElementById("card1").src == "https://erx35.github.io/Guess_The_Joker//assets/images/card_back_blue.png") {
             flipCard("card3")
         }
     });
