@@ -53,9 +53,9 @@ let eventLock = 0;
  */
 function runGame() {
     cardArray = [0, 0, 0];
-    document.getElementById("card1").src = "assets/images/card_back_blue.png";
-    document.getElementById("card2").src = "assets/images/card_back_blue.png";
-    document.getElementById("card3").src = "assets/images/card_back_blue.png";
+    document.getElementById("card1").src = "assets/images/card_back_blue.webp";
+    document.getElementById("card2").src = "assets/images/card_back_blue.webp";
+    document.getElementById("card3").src = "assets/images/card_back_blue.webp";
 
 
     randomJokerLocation = getRandomLocation();
@@ -75,10 +75,10 @@ function flipCard(card) {
     let i = 0;
     for (let card in cards) {
         if ( cardArray[i] === 1){
-            document.getElementById(cards[card]).src = "assets/images/joker.png";
+            document.getElementById(cards[card]).src = "assets/images/joker.webp";
         }
         else if ( cardArray[i] === 0) {
-            document.getElementById(cards[card]).src = "assets/images/2_clugb.png";
+            document.getElementById(cards[card]).src = "assets/images/2_clugb.webp";
         }
         i++;
     }
@@ -89,6 +89,7 @@ function flipCard(card) {
     else {
         wrong.innerText++;
     }
+    document.getElementById("start").innerText = "Restart";
 
 
 }
