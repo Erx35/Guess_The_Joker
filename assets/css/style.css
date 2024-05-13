@@ -25,6 +25,19 @@ body {
     margin: 0 0;
 }
 
+#player-instructions-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#player-instructions {
+    font-size: 30px;
+    text-align: center;
+}
 
 .deck-area {
     display: flex;

@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("right").innerText = 0;
     document.getElementById("wrong").innerText = 0;
 
-
-
     img1.addEventListener("click", function() {
         if (eventLock == 0) {
             flipCard("card1")
@@ -42,9 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("wrong").innerText = 0;
     }); 
 
- 
-
-});
+ });
 
 //Answer global array
 let cardArray = [0, 0, 0];
@@ -73,47 +69,20 @@ function runGame() {
  * @param {selected card} card 
  */
 function flipCard(card) {
-    let img1 = document.getElementById("card1");
-    let img2 = document.getElementById("card2");
-    let img3 = document.getElementById("card3");
 
-    let answer = [0, 0, 0];
-    if (card === "card1") {
-        answer = [1, 0, 0];
-    }
-    else if (card === "card2") {
-        answer = [0, 1, 0];
-    }
-    else if (card === "card3") {
-        answer = [0, 0, 1];
-    }
-    
-    for (let i = 0; i < 3 ; i++) {
-        if (i === 0) {
-            if ( cardArray[0] === 1){
-                document.getElementById("card1").src = "assets/images/joker.png";
-            }
-            else if ( cardArray[0] === 0) {
-                document.getElementById("card1").src = "assets/images/2_clugb.png";
-            }
+    const cards = [`card1`, `card2`, `card3`];
+
+    let i = 0;
+    for (let card in cards) {
+        if ( cardArray[i] === 1){
+            document.getElementById(cards[card]).src = "assets/images/joker.png";
         }
-        else if (i === 1) {
-            if ( cardArray[1] === 1){
-                document.getElementById("card2").src = "assets/images/joker.png";
-             }
-            else if ( cardArray[1] === 0){
-                document.getElementById("card2").src = "assets/images/2_clugb.png";
-            }
+        else if ( cardArray[i] === 0) {
+            document.getElementById(cards[card]).src = "assets/images/2_clugb.png";
         }
-        else if ((i === 2)) {
-            if ( cardArray[2] === 1){
-                document.getElementById("card3").src = "assets/images/joker.png";
-            }
-            else if ( cardArray[2] === 0){
-                document.getElementById("card3").src = "assets/images/2_clugb.png";
-            }
-        }
+        i++;
     }
+
     if (checkAnswer(card)) {
         right.innerText++;
     }
@@ -167,3 +136,4 @@ function checkAnswer(playerGuess) {
         
     }
 }
+
