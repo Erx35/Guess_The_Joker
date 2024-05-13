@@ -70,6 +70,11 @@ body {
     flex-wrap: wrap;
 }
 
+
+#card1 #card2 #card3 {
+    width: 500px;
+}
+
 .guess {
     font-size: 50px;
     padding: 10px 10px;
