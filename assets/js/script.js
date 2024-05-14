@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     img1.addEventListener("click", function() {
         if (eventLock == 0) {
-            flipCard("card1")
+            flipCard("card1");
             eventLock = 1;
         }
 
@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     img2.addEventListener("click", function() {
         if (eventLock == 0) {
-            flipCard("card2")
+            flipCard("card2");
             eventLock = 1;
         }
     });
 
     img3.addEventListener("click", function() {
         if (eventLock == 0) {
-            flipCard("card3")
+            flipCard("card3");
             eventLock = 1;
         }
     });
@@ -71,6 +71,9 @@ function runGame() {
 function flipCard(card) {
 
     const cards = [`card1`, `card2`, `card3`];
+
+    let right = document.getElementById("right");
+    let wrong = document.getElementById("wrong");
 
     let i = 0;
     for (let card in cards) {
