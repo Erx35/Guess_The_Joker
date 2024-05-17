@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let cardArray = [0, 0, 0];
 
 //Event cock global val
-let eventLock = 0;
+let eventLock = 1;
 
 /**
  * This function runs the game, hides all the card faces and puts a random card to a joker value
