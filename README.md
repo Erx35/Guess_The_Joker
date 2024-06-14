@@ -11,30 +11,29 @@ results.
 The game has many features to it. Below is a list of the features and what they represent.
 
 * ### Flashy game title
-    * At the top of the page is a game name with moving Joker hats which actually gives a hint to what the game is about.    
+    At the top of the page is a game name with moving Joker hats which actually gives a hint to what the game is about.    
 
 <br />
 
 ![Image of play instructions](media/heading.JPG)
 
 * ### Player instructions at the top of the play area
-    * To make it easy to understand where to start, instructions on how to start the game as shown at the top of the play area.    
+    To make it easy to understand where to start, instructions on how to start the game as shown at the top of the play area.    
     
 <br />
 
 ![Image of play instructions](media/user-instruction.JPG)
 
 * ### Easy to use playing field
-    * Game is created so that it is very easy to use and has very simple playing controls.
-    * Button to start/restart the playing field
-    * Button to reset the score     
+    Game is created so that it is very easy to use and as very simple playing controls. Button to start/restart the playing field are located under the playing field and are created big to ease the visibility of the game controls. Button to reset the score is also added to give the player ability of resetting the game score if the number of wrong answers gets too big ! :)  
 
 <br />
 
 ![Image of playing area](media/game-area.JPG)
 
 * ### Score area
-    * At the bottom of the page, there is a score area that is incremented depending on the outcome of the game.    
+    At the bottom of the page, there is a score area that is incremented depending on the outcome of the game. Every correct answer would increment the correct display box and every wrong selection would increment the wrong display box. This allows the player to see the current score of the game and reset the score if needed.
+    
 
 <br />
 
