@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Header for the web page-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <title>Guess Where's The Joker?</title>
     <link rel="icon" type="image/png" sizes="48x49" href="assets/icon/cards.png">
 </head>
-
+<!--Main body of the game page-->
 <body>
     <div class="main-header-div">
         <img src="assets/images/joker-hat.gif" alt="Joker facing left">
@@ -25,13 +25,15 @@
     <div id="player-instructions-div">
         <h2 id="player-instructions">Please click on Start button and then select a card.</h2>
     </div>
-
+    <!-- Playing area div-->
     <div class="play-area">
         <div class="deck-area">
+            <!--Images area for cards-->
             <img id="card1" src="assets/images/joker.webp" alt="Card one">
             <img id="card2" src="assets/images/joker.webp" alt="Card two">
             <img id="card3" src="assets/images/joker.webp" alt="Card three">
         </div>
+        <!--Div for user buttons -->
         <div class="control-area">
             <button data-typ="submit" id="start">Start</button>
             <button data-typ="submit" id="resetScore">Reset Score</button>
@@ -39,7 +41,7 @@
 
     </div>
 
-
+    <!--Div for the score keeping-->
     <div class="guess-area">
         <p class="guess">Guessed Right <span id="right">0</span></p>
         <p class="guess">Guessed Wrong <span id="wrong">0</span></p>
